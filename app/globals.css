@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+
+
+.editor tr {
+  border-top: 1px solid #c6cbd1;
+}
+
+
+.editor th,
+.editor td {
+  padding: 12px 55px;
+  border: 1px solid #dfe2e5;
+}
+
+
+.editor h1 {
+  font-size: 2em;
+}
+
+.editor h2 {
+  font-size: 1.5em;
+}
+
+.editor h3 {
+  font-size: 1.7em;
+}
+
+.editor h4 {
+  font-size: 1em;
+}
+
+.editor h5 {
+  font-size: 0.83em;
+}
+
+.editor h6 {
+  font-size: 0.67em;
+}
+
+.editor h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bolder;
+}
+
+
+
+.editor blockquote {
+  color: #fff;
+  margin: 10px;
+  padding-left: 1.2em;
+  border-left: 0.2em #666 solid;
+  font-style: italic;
+}
+
+
+.editor a {
+  color: rgb(46, 46, 233);
+}
+
+.editor li {
+  list-style-type: square;
+}
+
+
+.fullheight {
+  height: 92vh;
+}
