@@ -24,6 +24,43 @@ body {
 }
 
 
+nav {
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+nav h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: rgb(164, 247, 225);
+}
+
+.button--container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn {
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: 0.3s linear;
+}
+
+
+.create {
+  color: #357cee;
+}
+
+.save {
+  background: #357cee;
+  border-radius: 5px;
+}
+
+
 
 .editor tr {
   border-top: 1px solid #c6cbd1;
@@ -92,4 +129,21 @@ h6 {
 
 .fullheight {
   height: 92vh;
+}
+
+
+
+@media (hover: hover) {
+  .btn {
+    cursor: pointer;
+    transition: 0.3s linear;
+  }
+
+  .create:hover {
+    color: #07a5e9;
+  }
+
+  .save:hover {
+    background: #06bdf4;
+  }
 }
