@@ -17,6 +17,7 @@
 }
 
 body {
+  min-height: 100vh;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom,
       transparent,
@@ -79,11 +80,11 @@ nav h1 {
 }
 
 .editor h2 {
-  font-size: 1.5em;
+  font-size: 1.7em;
 }
 
 .editor h3 {
-  font-size: 1.7em;
+  font-size: 1.5em;
 }
 
 .editor h4 {
@@ -106,6 +107,8 @@ h5,
 h6 {
   font-weight: bolder;
 }
+
+
 
 
 

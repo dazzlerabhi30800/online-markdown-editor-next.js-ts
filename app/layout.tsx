@@ -5,8 +5,6 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
-
-
 export const metadata: Metadata = {
   title: "Online Markdown Editor in TS",
   description: "This is an Online Mardown Editor created by Dazzler Abhi",
