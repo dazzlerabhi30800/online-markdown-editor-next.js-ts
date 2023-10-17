@@ -1,6 +1,6 @@
 "use client";
 import { FunctionComponent, useState, useEffect } from "react";
-import ReactMarkdown, { Components } from "react-markdown";
+import ReactMarkdown from "react-markdown";
 import remarkGfm from 'remark-gfm';
 import Navbar from "@/Components/Navbar";
 
