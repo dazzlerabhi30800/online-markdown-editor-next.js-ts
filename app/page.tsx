@@ -2,42 +2,34 @@
 import { FunctionComponent, useState, useEffect } from "react";
 import ReactMarkdown, { Components } from "react-markdown";
 import remarkGfm from 'remark-gfm';
-import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
-import atomDark from "react-syntax-highlighter/dist/cjs/styles/prism/atom-dark";
 import Navbar from "@/Components/Navbar";
 
 
 
 
-const customRenderers: any = {
-  const({ node, inline, className, children, ...props }: any) {
-    const { value } = node;
-    const match = /language-(\w+)/.exec(className || "")
-    return !inline && match ? (
-      <SyntaxHighlighter
-        // children={String(children).replace(/\n$/, '')}
-        children={value}
-        style={atomDark}
-        language={match[1]}
-        {...props}
-      />
+// const customRenderers: any = {
+//   const({ node, inline, className, children, ...props }: any) {
+//     const { value } = node;
+//     const match = /language-(\w+)/.exec(className || "")
+//     return !inline && match ? (
+//       <SyntaxHighlighter
+//         // children={String(children).replace(/\n$/, '')}
+//         children={value}
+//         style={atomDark}
+//         language={match[1]}
+//         {...props}
+//       />
 
-    )
-      :
-      (
-        <code className={className} {...props}>
-          {children}
-        </code>
-      )
-  }
-}
+//     )
+//       :
+//       (
+//         <code className={className} {...props}>
+//           {children}
+//         </code>
+//       )
+//   }
+// }
 
-
-
-
-interface Iprops {
-  content: string,
-}
 
 const Home: FunctionComponent = () => {
   const [value, setValue] = useState<string>("");
@@ -60,7 +52,7 @@ const Home: FunctionComponent = () => {
         ></textarea>
         {value.length > 0 &&
           <div className="bg-slate-800 p-2 h-inherit w-full text-white editor">
-            <ReactMarkdown children={value} components={customRenderers} remarkPlugins={[remarkGfm]} />
+            <ReactMarkdown children={value} remarkPlugins={[remarkGfm]} />
           </div>
         }
       </div>
