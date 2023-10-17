@@ -78,7 +78,7 @@ nav h1 {
 
 
 .editor h1 {
-  font-size: 2em;
+  font-size: 2em !important;
 }
 
 .editor h2 {
@@ -107,17 +107,22 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: bolder;
+  font-weight: 700;
 }
 
+.editor img {
+  margin: 1.2rem auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
 
 
 
 
 .editor blockquote {
   color: #fff;
-  margin: 10px;
   padding-left: 1.2em;
+  margin: 10px;
   border-left: 0.2em #666 solid;
   font-style: italic;
 }
@@ -128,6 +133,7 @@ h6 {
   color: #ccc;
   font-size: 0.9rem;
   padding: 2px 5px;
+  border-radius: 2px;
 }
 
 
