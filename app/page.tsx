@@ -3,33 +3,10 @@ import { FunctionComponent, useState, useEffect } from "react";
 import ReactMarkdown, { Components } from "react-markdown";
 import remarkGfm from 'remark-gfm';
 import Navbar from "@/Components/Navbar";
-// import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
-// import atomDark from 'react-syntax-highlighter/dist/cjs/styles/prism/atom-dark';
 
 
 
 
-// const customRenderers: any = {
-//   const({ node, inline, className, children, ...props }: any) {
-//     const { value } = node;
-//     const match = /language-(\w+)/.exec(className || "")
-//     return !inline && match ? (
-//       <SyntaxHighlighter
-//         children={String(children).replace(/\n$/, '')}
-//         style={atomDark}
-//         language={match[1]}
-//         {...props}
-//       />
-
-//     )
-//       :
-//       (
-//         <code className={className} {...props}>
-//           {children}
-//         </code>
-//       )
-//   }
-// }
 
 
 const Home: FunctionComponent = () => {
