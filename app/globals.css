@@ -53,8 +53,14 @@ nav h1 {
 }
 
 
-.create {
+.copy {
   color: #357cee;
+}
+
+
+.copied {
+  color: cyan;
+  font-weight: 700;
 }
 
 .save {
