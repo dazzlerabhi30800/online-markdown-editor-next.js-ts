@@ -1,27 +1,34 @@
 "use client";
 import { FunctionComponent, useState } from "react";
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown, { Components } from "react-markdown";
 // import { NormalComponents, SpecialComponents } from 'react-markdown/jf';
 import remarkGfm from 'remark-gfm';
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import atomDark from "react-syntax-highlighter/dist/cjs/styles/prism/atom-dark";
 
-const customRenderers = {
-  code(code: any) {
-    const { node } = code;
-    const { lang, value } = node;
-    return (
-      <div>
-        <SyntaxHighlighter
-          style={atomDark}
-          language={lang}
-          children={value}
-        />
-      </div>
+
+
+
+const customRenderers: any = {
+  const({ node, inline, className, children, ...props }: any) {
+    const match = /language-(\w+)/.exec(className || "")
+    return !inline && match ? (
+      <SyntaxHighlighter
+        children={String(children).replace(/\n$/, '')}
+        style={atomDark}
+        language={match[1]}
+        {...props}
+      />
+
     )
+      :
+      (
+        <code className={className} {...props}>
+          {children}
+        </code>
+      )
   }
 }
-
 
 
 
@@ -46,7 +53,6 @@ const Home: FunctionComponent<Iprops> = ({ content }) => {
         <div className="bg-slate-800 p-2 h-full w-full text-white editor">
           <ReactMarkdown children={value} components={customRenderers} remarkPlugins={[remarkGfm]} />
         </div>
-
       }
     </div>
 

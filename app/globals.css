@@ -123,8 +123,20 @@ h6 {
 }
 
 
+.editor code {
+  background: #5c6f7382;
+  color: #ccc;
+  font-size: 0.9rem;
+  padding: 2px 5px;
+}
+
+
 .editor a {
-  color: rgb(46, 46, 233);
+  color: #71f8a0;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 0.9rem;
+  text-decoration: underline;
 }
 
 .editor li {
